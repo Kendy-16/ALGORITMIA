@@ -18,31 +18,38 @@ public class Coordenada{
     
     //Constructor
     public Coordenada(Coordenada c ){
-        //a
+        this.x = c.x;
+        this.y = c.y;
     }
 
     //métodos setter
     void setX(double x) {
-        // fill in the code here
+        this.x = x;
     }
+    
     void setY(double y){
-        // fill in the code here
+        this.y = y;
     }
+    
     //métodos getter
     double getX(){
-        // fill in the code here
+        return this.x;
     }
+    
     double getY(){
-        // fill in the code here
+        return this.y;
     }
+    
     //método de instancia que calcula la distancia euclideana
     double distancia(Coordenada c){
     // fill in the code here
     }
+    
     //método de clase que calcula la distancia euclideana
     static double distancia(Coordenada c1, Coordenada c2){
     // fill in the code here
     }
+
     //método que devuelve los valores de una coordenada en determinado formato
     String toString(){
     // fill in the code here
