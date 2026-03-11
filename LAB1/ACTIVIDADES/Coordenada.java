@@ -1,4 +1,8 @@
+package LAB1.ACTIVIDAD;
+
 import java.util.*;
+
+
 public class Coordenada{
     private double x;
     private double y;
@@ -42,16 +46,19 @@ public class Coordenada{
     
     //método de instancia que calcula la distancia euclideana
     double distancia(Coordenada c){
-    // fill in the code here
+        double d = Math.sqrt(Math.pow((c.x - this.x),2)+Math.pow((c.y - this.y),2));
+        return d;
     }
     
     //método de clase que calcula la distancia euclideana
     static double distancia(Coordenada c1, Coordenada c2){
-    // fill in the code here
+        double d = Math.sqrt(Math.pow((c1.x - c2.x),2)+Math.pow((c1.y - c2.y),2));
+        return d;
     }
 
     //método que devuelve los valores de una coordenada en determinado formato
     String toString(){
-    // fill in the code here
+        String message = "a";
+        return message;
     }
 }
