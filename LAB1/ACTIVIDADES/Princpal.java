@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Principal {
     public static void main(String[] args) {
         
         Scanner ingreso = new Scanner(System.in);
