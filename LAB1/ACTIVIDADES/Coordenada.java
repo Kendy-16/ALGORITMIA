@@ -1,7 +1,4 @@
-package LAB1.ACTIVIDAD;
-
 import java.util.*;
-
 
 public class Coordenada{
     private double x;
@@ -10,8 +7,8 @@ public class Coordenada{
     //Constructor, initialize x, y attributes to zero
     public Coordenada( )
     {
-        this.x = 0;
-        this.y = 0;
+        this.x = 0.0;
+        this.y = 0.0;
     }
     
     //Constructor
@@ -58,7 +55,7 @@ public class Coordenada{
 
     //método que devuelve los valores de una coordenada en determinado formato
     String toString(){
-        String message = "a";
+        String message = "(" + this.x + ", " + this.y + ")";
         return message;
     }
 }
