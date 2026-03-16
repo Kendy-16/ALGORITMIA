@@ -54,7 +54,7 @@ public class Coordenada{
     }
 
     //método que devuelve los valores de una coordenada en determinado formato
-    String toString(){
+    public String toString(){
         String message = "(" + this.x + ", " + this.y + ")";
         return message;
     }
