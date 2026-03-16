@@ -49,6 +49,9 @@ public class Main {
         
         System.out.println("\nRectangulo A\n" + A);
         System.out.println("\nRectangulo B\n" + B);
+        System.out.println("\n___________________________________\n");
+        
+        //avanzar la consigna 2b
 
         ingreso.close();
     }
