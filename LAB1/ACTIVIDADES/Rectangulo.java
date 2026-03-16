@@ -11,11 +11,11 @@ public class Rectangulo{
     }
     
     public void setEsquina1 (Coordenada coo) {
-        this.esquina1 = esquina1;
+        this.esquina1 = coo;
     }
     
     public void setEsquina2 (Coordenada coo) {
-        this.esquina2 = esquina2;
+        this.esquina2 = coo;
     }
 
     public Coordenada getEsquina1() {
@@ -27,6 +27,7 @@ public class Rectangulo{
     }
 
     public String toString() {
-    // fill in the code here
+        String mensaje = "Esquina1: " + this.esquina1 + "\nEsquina2: " + this.esquina2;
+        return mensaje;
     }
 }
