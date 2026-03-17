@@ -84,9 +84,11 @@ public class Principal {
         cont.addRectangulo(B);
         System.out.println("___________________________________\n");
         System.out.println("Rectangulo A");
+        System.out.println("\nEsquina 1       Esquina 2");
         mostrarRectangulo(A);
         
         System.out.println("\nRectangulo B");
+        System.out.println("\nEsquina 1       Esquina 2");
         mostrarRectangulo(B);
         System.out.println("___________________________________\n");
         if(Verificador.esSobrePos(A,B)){
@@ -101,10 +103,10 @@ public class Principal {
         }else if(Verificador.esDisjunto(A,B)){
             System.out.println("Los rectángulos están separados");
         }
-        System.out.println("___________________________________\n");
+        System.out.println("___________________________________");
         System.out.println("Contenido del contenedor:");
         System.out.println(cont);
-        System.out.println("___________________________________\n");
+        System.out.println("___________________________________");
         
         ingreso.close();
     }
