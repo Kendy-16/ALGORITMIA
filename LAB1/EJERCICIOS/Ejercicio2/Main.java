@@ -30,6 +30,7 @@ public class Main {
             Scanner teclado = new Scanner(System.in);
             System.out.print("Ingrese tamaño de subregión k: ");
             int k = teclado.nextInt();
+            teclado.close();
 
             AnalizadorMinero.analizar(zonas, filas, columnas, k);
 
