@@ -29,7 +29,6 @@ public class Verificador {
 
         //Si los rangos se cruzan entonces comparten área
         if((aIzq < bDer) && (aDer > bIzq) && (aBajo < bRriba) && (aRriba > bBajo)){
-            System.out.println("\nLos rectángulos se sobreponen\n");
             return true;
         }
 
@@ -65,7 +64,6 @@ public class Verificador {
 
         //Si un rectángulo está completamente separado del otro son disjuntos
         if((aDer < bIzq) || (bDer < aIzq) || (aRriba < bBajo) || (bRriba < aBajo)){
-            System.out.println("\nLos rectángulos están separados\n");
             return true;
         }
 
@@ -77,7 +75,6 @@ public class Verificador {
 
         //No se sobreponen ni estan separados por tanto deben estar juntos
         if(!esDisjunto(r1,r2) && !esSobrePos(r1,r2)){
-            System.out.println("\nLos rectángulos están juntos\n");
             return true;
         }
         return false;
