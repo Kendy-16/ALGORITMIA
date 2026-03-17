@@ -1,12 +1,18 @@
 import java.util.*;
 
 public class Principal {
+    
+    // consigna c
+    public static void mostrarRectangulo(Rectangulo r){
+        System.out.println(r);
+    }
     public static void main(String[] args) {
         
         Scanner ingreso = new Scanner(System.in);
         
         // Ingreso del Rectángulo A
-        System.out.println("\nIngrese dos esquinas del Rectangulo A");
+        System.out.println("\n___________________________________\n");
+        System.out.println("Ingrese dos esquinas del Rectangulo A");
 
         System.out.println("\nCoordenadas de la primera esquina");
         System.out.print("x: ");
@@ -14,7 +20,7 @@ public class Principal {
         System.out.print("y: ");
         double Ay1 = ingreso.nextDouble();
 
-        System.out.println("\nCoordenadas de la primera esquina");
+        System.out.println("\nCoordenadas de la segunda esquina");
         System.out.print("x: ");
         double Ax2 = ingreso.nextDouble();
         System.out.print("y: ");
@@ -24,10 +30,10 @@ public class Principal {
         Coordenada Ap2 = new Coordenada(Ax2, Ay2);
 
         Rectangulo A = new Rectangulo(Ap1, Ap2);
-        System.out.println("\n___________________________________\n");
+        System.out.println("___________________________________\n");
 
         // Ingreso del Rectángulo B
-        System.out.println("\nIngrese dos esquinas del Rectangulo B");
+        System.out.println("Ingrese dos esquinas del Rectangulo B");
 
         System.out.println("\nCoordenadas de la primera esquina");
         System.out.print("x: ");
@@ -35,7 +41,7 @@ public class Principal {
         System.out.print("y: ");
         double By1 = ingreso.nextDouble();
 
-        System.out.println("\nCoordenadas de la primera esquina");
+        System.out.println("\nCoordenadas de la segunda esquina");
         System.out.print("x: ");
         double Bx2 = ingreso.nextDouble();
         System.out.print("y: ");
@@ -45,14 +51,24 @@ public class Principal {
         Coordenada Bp2 = new Coordenada(Bx2, By2);
 
         Rectangulo B = new Rectangulo(Bp1, Bp2);
-        System.out.println("\n___________________________________\n");
+        System.out.println("___________________________________\n");
         
-        System.out.println("\nRectangulo A\n" + A);
-        System.out.println("\nRectangulo B\n" + B);
-        System.out.println("\n___________________________________\n");
-        
-        //avanzar la consigna 2b
+        System.out.println("Rectangulo A");
+        mostrarRectangulo(A);
 
+        System.out.println("\nRectangulo B");
+        mostrarRectangulo(B);
+
+        System.out.println("___________________________________\n");
+        if(Verificador.esSobrePos(A,B)){
+            System.out.println("\nLos rectángulos se sobreponen");
+        }else if(Verificador.esJunto(A,B)){
+            System.out.println("\nLos rectángulos están juntos");
+        }else if(Verificador.esDisjunto(A,B)){
+            System.out.println("\nLos rectángulos están separados");
+        }
+        System.out.println("___________________________________\n");
+        
         ingreso.close();
     }
 }
