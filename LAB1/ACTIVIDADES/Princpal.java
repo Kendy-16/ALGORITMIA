@@ -61,11 +61,11 @@ public class Principal {
 
         System.out.println("___________________________________\n");
         if(Verificador.esSobrePos(A,B)){
-            System.out.println("\nLos rectángulos se sobreponen");
+            System.out.println("Los rectángulos se sobreponen");
         }else if(Verificador.esJunto(A,B)){
-            System.out.println("\nLos rectángulos están juntos");
+            System.out.println("Los rectángulos están juntos");
         }else if(Verificador.esDisjunto(A,B)){
-            System.out.println("\nLos rectángulos están separados");
+            System.out.println("Los rectángulos están separados");
         }
         System.out.println("___________________________________\n");
         
