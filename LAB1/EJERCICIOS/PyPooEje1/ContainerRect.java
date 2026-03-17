@@ -14,4 +14,20 @@ public class ContainerRect {
         areas = new double[n];
     }
     
+    public void agregarRectangulo(Rectangulo r){
+        rectangulos[numRec] = r;
+        
+        double x1 = r.getEsquina1().getX();
+        double y1 = r.getEsquina1().getY();
+        double x2 = r.getEsquina2().getX();
+        double y2 = r.getEsquina2().getY();
+        
+        double dx = x2 - x1;
+        double dy = y2 - y1;
+        
+        distancias[numRec] = Math.sqrt(dx*dx + dy*dy);
+        areas[numRec] = r.calculoArea();
+        
+        numRec++;
+    }
 }
