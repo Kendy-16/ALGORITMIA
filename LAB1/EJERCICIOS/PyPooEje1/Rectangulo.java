@@ -39,7 +39,7 @@ public class Rectangulo{
     }
 
     public String toString() {
-        String mensaje = "Esquina1: " + this.esquina1 + "\nEsquina2: " + this.esquina2;
+        String mensaje = this.esquina1 + ", " + this.esquina2;
         return mensaje;
     }
 }
