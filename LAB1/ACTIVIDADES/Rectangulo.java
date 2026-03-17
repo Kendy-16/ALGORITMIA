@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.*;
 
 public class Rectangulo{
     private Coordenada esquina1;
@@ -24,6 +24,18 @@ public class Rectangulo{
 
     public Coordenada getEsquina2() {
         return esquina2;
+    }
+
+    // COnsigna c - Areas
+    public double calculoArea(){
+        double x1 = esquina1.getX();
+        double y1 = esquina1.getY();
+        double x2 = esquina2.getX();
+        double y2 = esquina2.getY();
+        
+        double base = Math.abs(x2 - x1);
+        double altura = Math.abs(y2 - y1);
+        return base * altura;
     }
 
     public String toString() {
