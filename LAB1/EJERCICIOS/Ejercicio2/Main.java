@@ -1,41 +1,13 @@
 package LAB1.EJERCICIOS.Ejercicio2;
 
-import java.io.File;
-import java.util.Scanner;
-
 public class Main {
+    public static void main(String[] args) throws Exception {
+        // Nombre del archivo de texto y tamaño de la región a buscar
+        String nombreArchivo = "LAB1/EJERCICIOS/Ejercicio2/datos.txt";
+        int k = 2; // Tamaño de la región k x k
 
-    public static void main(String[] args) {
-
-        try {
-
-            Scanner archivo = new Scanner(new File("zonas.txt"));
-
-            int filas = archivo.nextInt();
-            int columnas = archivo.nextInt();
-
-            Zona[] zonas = new Zona[filas * columnas];
-
-            for (int i = 0; i < zonas.length; i++) {
-
-                String mineral = archivo.next();
-                double cantidad = archivo.nextDouble();
-                double pureza = archivo.nextDouble();
-
-                zonas[i] = new Zona(mineral, cantidad, pureza);
-            }
-
-            archivo.close();
-
-            Scanner teclado = new Scanner(System.in);
-            System.out.print("Ingrese tamaño de subregión k: ");
-            int k = teclado.nextInt();
-            teclado.close();
-
-            AnalizadorMinero.analizar(zonas, filas, columnas, k);
-
-        } catch (Exception e) {
-            System.out.println("Error leyendo el archivo");
-        }
+        // Creamos la instancia y ejecutamos
+        AnalisisMinero explorador = new AnalisisMinero();
+        explorador.ejecutarAnalisis(nombreArchivo, k);
     }
 }
