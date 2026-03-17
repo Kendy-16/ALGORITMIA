@@ -30,4 +30,15 @@ public class ContainerRect {
             System.out.println("No es posible guardar más rectángulos");
         }
     }
+    
+    public String toString(){
+        String texto = "Rectangulo  ----  Coordenadas  ----  Distancia  ----  Area\n";
+        for(int i = 0; i < numRec; i++){
+            texto += (i+1) + "  ----  "
+            + rectangulos[i] + "  ----  "
+            + distancias[i] + "  ----  "
+            + areas[i] + "\n";
+        }
+        return texto;
+    }
 }
