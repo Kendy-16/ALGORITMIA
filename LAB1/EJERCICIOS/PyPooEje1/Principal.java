@@ -59,7 +59,7 @@ public class Principal {
         Coordenada Ap2 = new Coordenada(Ax2, Ay2);
         
         Rectangulo A = new Rectangulo(Ap1, Ap2);
-        cont.agregarRectangulo(A);
+        cont.addRectangulo(A);
         System.out.println("___________________________________\n");
         
         // Ingreso del Rectángulo B
@@ -81,7 +81,7 @@ public class Principal {
         Coordenada Bp2 = new Coordenada(Bx2, By2);
         
         Rectangulo B = new Rectangulo(Bp1, Bp2);
-        cont.agregarRectangulo(B);
+        cont.addRectangulo(B);
         System.out.println("___________________________________\n");
         
         System.out.println("Rectangulo A");
