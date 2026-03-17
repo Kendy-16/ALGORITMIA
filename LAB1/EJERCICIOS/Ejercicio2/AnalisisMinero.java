@@ -1,4 +1,3 @@
-package LAB1.EJERCICIOS.Ejercicio2;
 import java.io.File;
 import java.util.Scanner;
 
