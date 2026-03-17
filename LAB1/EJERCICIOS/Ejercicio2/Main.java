@@ -1,5 +1,3 @@
-package LAB1.EJERCICIOS.Ejercicio2;
-
 public class Main {
     public static void main(String[] args) throws Exception {
         // Nombre del archivo de texto y tamaño de la región a buscar
