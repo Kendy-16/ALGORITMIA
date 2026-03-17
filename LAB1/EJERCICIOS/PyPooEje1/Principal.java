@@ -90,6 +90,9 @@ public class Principal {
         System.out.println("\nRectangulo B");
         mostrarRectangulo(B);
         
+        System.out.println("\nListado de rectangulos guardados:");
+        System.out.println(cont);
+        
         System.out.println("___________________________________\n");
         if(Verificador.esSobrePos(A,B)){
             Rectangulo sobre = rectanguloSobre(A,B);
