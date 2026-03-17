@@ -83,16 +83,11 @@ public class Principal {
         Rectangulo B = new Rectangulo(Bp1, Bp2);
         cont.addRectangulo(B);
         System.out.println("___________________________________\n");
-        
         System.out.println("Rectangulo A");
         mostrarRectangulo(A);
         
         System.out.println("\nRectangulo B");
         mostrarRectangulo(B);
-        
-        System.out.println("\nListado de rectangulos guardados:");
-        System.out.println(cont);
-        
         System.out.println("___________________________________\n");
         if(Verificador.esSobrePos(A,B)){
             Rectangulo sobre = rectanguloSobre(A,B);
@@ -106,6 +101,9 @@ public class Principal {
         }else if(Verificador.esDisjunto(A,B)){
             System.out.println("Los rectángulos están separados");
         }
+        System.out.println("___________________________________\n");
+        System.out.println("Contenido del contenedor:");
+        System.out.println(cont);
         System.out.println("___________________________________\n");
         
         ingreso.close();
