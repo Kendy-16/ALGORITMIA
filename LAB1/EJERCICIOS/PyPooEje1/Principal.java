@@ -37,6 +37,7 @@ public class Principal {
     public static void main(String[] args) {
         
         Scanner ingreso = new Scanner(System.in);
+        ContainerRect cont = new ContainerRect(10);
         
         // Ingreso del Rectángulo A
         System.out.println("\n___________________________________\n");
@@ -58,6 +59,15 @@ public class Principal {
         Coordenada Ap2 = new Coordenada(Ax2, Ay2);
         
         Rectangulo A = new Rectangulo(Ap1, Ap2);
+        
+        cont.rectangulos[ContainerRect.numRec] = A;
+        
+        double dx = Ap2.getX() - Ap1.getX();
+        double dy = Ap2.getY() - Ap1.getY();
+        
+        cont.distancias[ContainerRect.numRec] = Math.sqrt(dx*dx + dy*dy);
+        cont.areas[ContainerRect.numRec] = A.calculoArea();
+        ContainerRect.numRec++;
         System.out.println("___________________________________\n");
         
         // Ingreso del Rectángulo B
@@ -79,6 +89,15 @@ public class Principal {
         Coordenada Bp2 = new Coordenada(Bx2, By2);
         
         Rectangulo B = new Rectangulo(Bp1, Bp2);
+        
+        cont.rectangulos[ContainerRect.numRec] = B;
+        
+        double dx2 = Bp2.getX() - Bp1.getX();
+        double dy2 = Bp2.getY() - Bp1.getY();
+        
+        cont.distancias[ContainerRect.numRec] = Math.sqrt(dx2*dx2 + dy2*dy2);
+        cont.areas[ContainerRect.numRec] = B.calculoArea();
+        ContainerRect.numRec++;
         System.out.println("___________________________________\n");
         
         System.out.println("Rectangulo A");
