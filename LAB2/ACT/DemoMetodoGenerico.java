@@ -1,4 +1,4 @@
-class DemoMetodoGenerico {
+public class DemoMetodoGenerico {
 
     static <T extends Comparable<T>> boolean igualArrays (T[] x, T[] y){
         //Si las longitudes de los arrays son diferentes,
@@ -26,9 +26,17 @@ class DemoMetodoGenerico {
         if (igualArrays(nums,nums4))
             System.out.println("nums es igual a nums4");
 
-        // Crea un array de double                 //A
-        //Double dvals[] = {1.1,2.2,3.3,4.4,5.5};  //B
-        //if(igualArrays(nums,dvals))              //C
+        
+        // Crea un array de double               //A
+        Double dvals0[] = {0.2,0.4,0.8,1.6,3.2};
+        Double dvals[] = {1.1,2.2,3.3,4.4,5.5};  //B
+        Double dvalscopy[] = {1.1,2.2,3.3,4.4,5.5};
+        
+        //if (igualArrays(nums,dvals))            // C
         //    System.out.println("nums es igual a dvals"); //D
+        if (igualArrays(dvals,dvalscopy))
+            System.out.println("dvals es igual a dvalscopy");
+        if (igualArrays(dvals,dvals0))
+            System.out.println("dvals es igual a dvals0");
     }
 }
