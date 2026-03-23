@@ -19,7 +19,7 @@ public class Principal {
         System.out.println("_________________________________");
 
         // Bolsa de Golosinas
-        Bolsa<Golosina> bolsaGolo = new Bolsa<Golosina>(5);
+        Bolsa<Golosina> bolsaGolo = new Bolsa<Golosina>(8);
         Golosina g1 = new Golosina("gomitas", 0.5);
         Golosina g2 = new Golosina("caramelos", 0.2);
         Golosina g3 = new Golosina("chicle", 0.1);
