@@ -22,4 +22,19 @@ public class Golosina {
     public void setPeso(double peso) {
         this.peso = peso;
     }
+
+    public String toString() {
+        return nombre + " - " + peso + " g";
+    }
+
+    // Metodo equals
+    public boolean equals(Object o) {
+
+        if (o instanceof Golosina) {
+            Golosina g = (Golosina) o;
+            return (this.nombre.equals(g.nombre)&&(this.peso == g.peso));
+        }
+        
+        return false;
+    }
 }
