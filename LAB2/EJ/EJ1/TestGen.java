@@ -29,7 +29,7 @@ public class TestGen {
         cajoneria.add(caja11);
         
         System.out.println("_________________________________\n");
-        System.out.println("PRUEBAS CON GOLOSINAS\n");
+        System.out.println("PRUEBAS CON GOLOSINAS");
         System.out.println("_________________________________\n");
         System.out.println("CONTENIDO DE LA CAJONERIA - GOLOSINA");
         System.out.println(cajoneria);
@@ -66,7 +66,7 @@ public class TestGen {
         System.out.println("Cantidad de 'gomitas': " + cant1);
         System.out.println("_________________________________");
         System.out.println("_________________________________\n");
-        System.out.println("PRUEBAS CON CHOCOLATINAS\n");
+        System.out.println("PRUEBAS CON CHOCOLATINAS");
         System.out.println("_________________________________\n");
         
         // Crear cajoneria de Chocolatinas
@@ -92,7 +92,6 @@ public class TestGen {
         cajCho.add(c4);
         cajCho.add(c11);
         
-        System.out.println("_________________________________\n");
         System.out.println("CONTENIDO DE LA CAJONERIA - CHOCOLATINA");
         System.out.println(cajCho);
         System.out.println("_________________________________\n");
