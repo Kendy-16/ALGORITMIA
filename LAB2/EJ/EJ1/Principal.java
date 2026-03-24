@@ -28,6 +28,10 @@ public class Principal {
         // Bolsa de arreglos de Chocolatinas
         Bolsa<Chocolatina[]> bolsaCho = new Bolsa<Chocolatina[]>(4);
         
+        System.out.println("_________________________________\n");
+        System.out.println("PRUEBAS DE RECORRER BOLSA");
+        System.out.println("_________________________________\n");
+        
         // Crear arreglo de chocolatinas
         Chocolatina[] arrCho = {
             new Chocolatina("milka"),
