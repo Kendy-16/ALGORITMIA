@@ -1,5 +1,3 @@
-package ACTS.ACT6;
-
 public class dpSolution {
     static int getValue(int[] values, int rodLength){
         
