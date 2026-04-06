@@ -1,5 +1,3 @@
-package ACTS.ACT2;
-
 import java.util.*;
 public class Subconjuntos {
     public static void generarSubconjuntos(int[] arr, List<Integer> actual, int i)
