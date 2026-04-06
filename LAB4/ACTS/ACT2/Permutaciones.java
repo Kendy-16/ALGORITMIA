@@ -1,5 +1,3 @@
-package ACTS.ACT2;
-
 import java.util.*;
 
 public class Permutaciones
