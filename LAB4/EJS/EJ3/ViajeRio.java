@@ -1,5 +1,3 @@
-package LAB4.EJS.EJ3;
-
 public class ViajeRio {
 
     public static int[][] calcularCostesMinimos(int[][] T, int n) {
