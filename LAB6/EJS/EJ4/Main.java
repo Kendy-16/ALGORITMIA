@@ -3,32 +3,31 @@
 class Nodo<T> {
     T dato;
     int valorSecundario;
-    Nodo<T> siguiente;
+    Nodo<T> next;
     Nodo(T dato, int v) { this.dato = dato; this.valorSecundario = v; }
-}
-
+    }
 class ColaOrdenada<T> {
     private Nodo<T> cabeza;
 
-    // Inserta ordenado por valorSecundario (menor = primero)
+    // Inserta ordenado por secondaryValue (menor = primero)
     public void insertar(T dato, int v) {
         Nodo<T> nuevo = new Nodo<>(dato, v);
         if (cabeza == null || v < cabeza.valorSecundario) {
-            nuevo.siguiente = cabeza;
+            nuevo.next = cabeza;
             cabeza = nuevo;
         } else {
             Nodo<T> actual = cabeza;
-            while (actual.siguiente != null && actual.siguiente.valorSecundario <= v)
-                actual = actual.siguiente;
-            nuevo.siguiente = actual.siguiente;
-            actual.siguiente = nuevo;
+            while (actual.next != null && actual.next.valorSecundario <= v)
+                actual = actual.next;
+            nuevo.next = actual.next;
+            actual.next = nuevo;
         }
     }
 
     public T desencolar() {
         if (cabeza == null) return null;
         T dato = cabeza.dato;
-        cabeza = cabeza.siguiente;
+        cabeza = cabeza.next;
         return dato;
     }
 
@@ -38,8 +37,8 @@ class ColaOrdenada<T> {
         Nodo<T> actual = cabeza;
         while (actual != null) {
             System.out.print("(" + actual.dato + "," + actual.valorSecundario + ")");
-            if (actual.siguiente != null) System.out.print(" -> ");
-            actual = actual.siguiente;
+            if (actual.next != null) System.out.print(" -> ");
+            actual = actual.next;
         }
         System.out.println();
     }

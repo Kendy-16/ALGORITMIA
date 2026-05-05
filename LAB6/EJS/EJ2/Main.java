@@ -1,7 +1,10 @@
 // ColaArreglo.java
 public class ColaArreglo <> {
     private int[]datos;
-    private int frente, f in, tamaño, capacidad;
+    private int frente;
+    private int fin;
+    private int tamaño;
+    private int capacidad;
 
     public ColaArreglo(int capacidad) {
         this.capacidad = capacidad;

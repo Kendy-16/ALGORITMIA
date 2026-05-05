@@ -28,6 +28,9 @@ class ColaEnlazada<T> {
 }
 
 class ColaPrioridad<T> {
+    // Usamos un array de tipo raw debido a las restricciones de Java con arrays genéricos.
+    // Es seguro porque solo almacenamos objetos de tipo ColaEnlazada<T>.
+    @SuppressWarnings("unchecked")
     private ColaEnlazada<T>[] colas;
     private int niveles;
 
@@ -38,7 +41,12 @@ class ColaPrioridad<T> {
         for (int i = 0; i < niveles; i++) colas[i] = new ColaEnlazada<>();
     }
 
-    public void encolar(T dato, int prioridad) { colas[prioridad].encolar(dato); }
+    public void encolar(T dato, int prioridad) {
+        if (prioridad < 0 || prioridad >= niveles) {
+            throw new IllegalArgumentException("Prioridad fuera de rango: " + prioridad);
+        }
+        colas[prioridad].encolar(dato);
+    }
 
     public T desencolar() {
         for (int i = niveles - 1; i >= 0; i--)
@@ -48,6 +56,11 @@ class ColaPrioridad<T> {
 }
 
 // Main.java
+
+/**
+ * Clase principal que demuestra el uso de la ColaPrioridad.
+ * Inserta varios elementos con diferentes prioridades y muestra el orden de salida.
+ */
 public class Main {
     public static void main(String[] args) {
         ColaPrioridad<String> cp = new ColaPrioridad<>(3);
