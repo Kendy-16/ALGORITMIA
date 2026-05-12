@@ -88,6 +88,35 @@ public class LinkedBST<E extends Comparable<E>> implements BinarySearchTree<E> {
         return node;
     }
 
+    //Encontrar el maximo
+    private Node<E> findMax(Node<E> node) {
+        while (node.getRight() != null) {
+            node = node.getRight();
+        }
+
+        return node;
+    }
+
+    // Retorna el menor valor del árbol
+    public E getMin() {
+
+        if (root == null) {
+            return null;
+        }
+
+        return findMin(root).getData();
+    }
+
+    // Retorna el mayor valor del árbol
+    public E getMax() {
+
+        if (root == null) {
+            return null;
+        }
+
+        return findMax(root).getData();
+    }
+
     //Elimina un Nodo
     private Node<E> deleteNode(Node<E> node, E data) {
 
@@ -159,6 +188,7 @@ public class LinkedBST<E extends Comparable<E>> implements BinarySearchTree<E> {
             return "";
         }
 
+        // izquierda -> raíz -> derecha
         return inOrder(node.getLeft())+node.getData()+" "+ inOrder(node.getRight());
     }
 
@@ -168,16 +198,41 @@ public class LinkedBST<E extends Comparable<E>> implements BinarySearchTree<E> {
         return inOrder(root);
     }
 
-    // PreOrder pendiente
-    @Override
-    public String preOrder() {
-        return "Pendiente";
+    // Método auxiliar PreOrder
+    private String preOrder(Node<E> node) {
+
+        if (node == null) {
+            return "";
+        }
+
+        // raíz -> izquierda -> derecha
+        return node.getData()+" "+ preOrder(node.getLeft())+preOrder(node.getRight());
     }
 
-    // PostOrder pendiente
+    // Recorrido PreOrder
+    @Override
+    public String preOrder() {
+        return preOrder(root);
+    }
+
+    // Método auxiliar PostOrder
+    private String postOrder(Node<E> node) {
+
+        // Caso base
+        if (node == null) {
+            return "";
+        }
+
+        // izquierda -> derecha -> raíz
+        return postOrder(node.getLeft())
+                + postOrder(node.getRight())
+                + node.getData() + " ";
+    }
+
+    // Recorrido PostOrder
     @Override
     public String postOrder() {
-        return "Pendiente";
+        return postOrder(root);
     }
 
     // Muestra árbol
