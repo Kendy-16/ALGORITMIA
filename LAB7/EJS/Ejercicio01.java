@@ -210,7 +210,7 @@ public class Ejercicio01 {
         System.out.println("\na) destroyNodes:");
         System.out.println("   Antes : " + bst);
         bst.destroyNodes();
-        System.out.println("   Después: " + bst);
+        System.out.println("   Después: " + bst);ZS
         // Intentar de nuevo → lanza ExceptionIsEmpty
         try { bst.destroyNodes(); }
         catch (ExceptionIsEmpty e) { System.out.println("   Excepción OK → " + e.getMessage()); }

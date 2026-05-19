@@ -201,4 +201,3 @@ public class Ejercicio02 {
         System.out.println("   areaBST(bst3)         = " + bst3.areaBST());
         System.out.println("   sameArea(bst1, bst3)  = " + sameArea(bst1, bst3));
     }
-}
