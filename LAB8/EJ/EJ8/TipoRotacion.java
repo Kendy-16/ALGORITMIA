@@ -1,0 +1,27 @@
+/**
+ * Enumeración que identifica el tipo de rotación AVL aplicada
+ * durante la inserción de un código de producto.
+ *
+ * Permite responder la Pregunta adicional 1:
+ *   "¿Qué rotación se aplicó al insertar un código?"
+ *
+ * @author Ingeniería de Sistemas
+ * @version 1.0
+ */
+public enum TipoRotacion {
+    NINGUNA   ("Sin rotación       - el árbol ya estaba balanceado."),
+    LL        ("Rotación LL        - rotación simple a la DERECHA."),
+    RR        ("Rotación RR        - rotación simple a la IZQUIERDA."),
+    LR        ("Rotación LR        - rotación doble: izquierda + derecha."),
+    RL        ("Rotación RL        - rotación doble: derecha + izquierda.");
+
+    private final String descripcion;
+
+    TipoRotacion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+}
