@@ -2,8 +2,7 @@
  * Clase que representa un nodo del árbol AVL.
  * Contiene la clave, referencias a hijos izquierdo/derecho y la altura del nodo.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ * 
  */
 public class AVLNode {
 

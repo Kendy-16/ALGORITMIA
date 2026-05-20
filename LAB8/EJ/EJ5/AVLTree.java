@@ -14,8 +14,7 @@
  * Resultado esperado para la secuencia 50,30,70,20,40,60,80,10,25,65:
  *   50  30  70  20  40  60  80  10  25  65
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ * 
  */
 public class AVLTree {
 

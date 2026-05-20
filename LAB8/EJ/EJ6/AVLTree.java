@@ -9,8 +9,7 @@
  * Propiedad: el primer elemento es siempre la raíz del árbol
  * (o subárbol), útil para reconstruir / clonar la estructura.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ * 
  */
 public class AVLTree {
 

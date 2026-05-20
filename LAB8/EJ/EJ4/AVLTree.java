@@ -12,8 +12,7 @@
  *   2. imprimirNivel(nodo, nivel) → método auxiliar recursivo que
  *      imprime los nodos de un nivel específico.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ *
  */
 public class AVLTree {
 

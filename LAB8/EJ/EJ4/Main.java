@@ -7,8 +7,7 @@
  * Árbol 1 → inserción: 50, 30, 70, 20, 40, 60, 80, 10, 25, 65
  * Árbol 2 → inserción: 15, 10, 20, 8, 12, 17, 25, 5, 11
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ * 
  */
 public class Main {
 
