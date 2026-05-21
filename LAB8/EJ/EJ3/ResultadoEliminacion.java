@@ -9,8 +9,7 @@
  *   • nodoDesbalance  → Nodo donde se detectó el desbalance (-1 si ninguno).
  *   • rotacionAplicada→ Tipo de rotación ejecutada para restaurar AVL.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ * 
  */
 public class ResultadoEliminacion {
 

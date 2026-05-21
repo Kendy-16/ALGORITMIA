@@ -16,8 +16,7 @@
  *     • Aplicación de rotaciones (LL, RR, LR, RL) si |FB| > 1.
  *     • Registro de cada operación en TablaPruebas.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ * 
  */
 public class AVLTree {
 

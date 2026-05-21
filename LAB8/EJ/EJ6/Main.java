@@ -5,8 +5,7 @@
  * y aplica el recorrido preOrder() para verificar el resultado.
  * Cada árbol muestra también inOrder() y BFS para comparación.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ *
  */
 public class Main {
 

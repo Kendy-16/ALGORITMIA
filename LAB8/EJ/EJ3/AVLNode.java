@@ -5,8 +5,6 @@
  * izquierdo y derecho, y la altura necesaria para el cálculo
  * del factor de balance AVL.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
  */
 public class AVLNode {
 

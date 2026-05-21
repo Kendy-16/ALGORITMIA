@@ -12,8 +12,6 @@ import java.util.List;
  *   4. Nodo desbalanceado
  *   5. Rotación aplicada
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
  */
 public class TablaPruebas {
 

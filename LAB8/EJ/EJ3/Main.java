@@ -14,8 +14,7 @@
  *
  * Al finalizar imprime la TABLA DE DOCUMENTACIÓN con todas las pruebas.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+ * 
  */
 public class Main {
 
