@@ -16,8 +16,7 @@
  *     • Aplicación de rotaciones (LL, RR, LR, RL) si |FB| > 1.
  *     • Registro de cada operación en TablaPruebas.
  *
- * 
- */
+ *  */
 public class AVLTree {
 
     // ─── Estado interno ────────────────────────────────────────────────────
@@ -164,7 +163,7 @@ public class AVLTree {
      * de retorno aplicando rotaciones LL, RR, LR o RL según corresponda.
      * Registra cada operación en la TablaPruebas.
      *
-     * @param key Clave del nodo a eliminar.
+     * Clave del nodo a eliminar.
      */
     public void eliminar(int key) {
 
