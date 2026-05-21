@@ -12,9 +12,6 @@
  *   2. Caso 0/1 hijo: sustitución directa.
  *   3. Caso 2 hijos: reemplaza con el sucesor inorden (mínimo del subárbol derecho).
  *   4. Rebalanceo en el camino de regreso a la raíz.
- *
- * @author Ingeniería de Sistemas
- * @version 1.0
  */
 public class AVLTree {
 

@@ -15,8 +15,7 @@
  *     • Actualización del factor de balance en cada nodo del camino.
  *     • Aplicación de rotaciones (LL, RR, LR, RL) si |FB| > 1.
  *     • Registro de cada operación en TablaPruebas.
- *
- *  */
+ */
 public class AVLTree {
 
     // ─── Estado interno ────────────────────────────────────────────────────

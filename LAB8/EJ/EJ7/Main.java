@@ -13,9 +13,6 @@
  *   1. Árbol inicialmente vacío.
  *   2. Inserción de claves que provocan los 4 tipos de desbalance.
  *   3. Eliminación de claves que fuerzan nuevas rotaciones.
- *
- * @author Ingeniería de Sistemas
- * @version 1.0
  */
 public class Main {
 

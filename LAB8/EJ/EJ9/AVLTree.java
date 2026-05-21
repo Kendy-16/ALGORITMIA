@@ -12,8 +12,7 @@
  *   P2 → Compara complejidad de búsqueda en lista vs AVL.
  *   P3 → Identifica el caso BST que ocurre al eliminar el turno 10.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+
  */
 public class AVLTree {
 

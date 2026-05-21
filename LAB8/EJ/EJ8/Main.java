@@ -12,8 +12,7 @@
  *   P2 → ¿Por qué el recorrido inorden muestra los productos ordenados?
  *   P3 → ¿Qué sucede al buscar un producto que no existe?
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+
  */
 public class Main {
 

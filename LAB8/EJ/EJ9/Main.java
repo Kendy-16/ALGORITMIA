@@ -12,8 +12,7 @@
  *   P2 → ¿Qué diferencia hay entre buscar en lista y en AVL?
  *   P3 → ¿Qué caso BST ocurre al eliminar el turno 10?
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+
  */
 public class Main {
 

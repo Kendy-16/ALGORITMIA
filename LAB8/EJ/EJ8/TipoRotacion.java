@@ -5,8 +5,7 @@
  * Permite responder la Pregunta adicional 1:
  *   "¿Qué rotación se aplicó al insertar un código?"
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+
  */
 public enum TipoRotacion {
     NINGUNA   ("Sin rotación       - el árbol ya estaba balanceado."),

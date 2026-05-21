@@ -5,8 +5,7 @@
  * las referencias a los hijos izquierdo y derecho, y la altura
  * del nodo dentro del árbol (necesaria para el balanceo AVL).
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+
  */
 public class AVLNode {
 

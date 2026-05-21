@@ -4,8 +4,7 @@
  * Cada nodo almacena el número de turno único de un paciente,
  * junto con las referencias a sus hijos y su altura en el árbol.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+
  */
 public class AVLNode {
 

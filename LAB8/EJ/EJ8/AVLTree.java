@@ -13,8 +13,7 @@
  *   P2 → El método inorden() demuestra el orden ascendente (BST invariante).
  *   P3 → buscar() devuelve un mensaje claro cuando el código no existe.
  *
- * @author Ingeniería de Sistemas
- * @version 1.0
+
  */
 public class AVLTree {
 
