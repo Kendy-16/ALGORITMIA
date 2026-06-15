@@ -19,6 +19,7 @@ public class ListLinked<E> {
         if (head == null) {
 
             head = newNode;
+
         } else {
 
             Node<E> temp = head;
@@ -50,6 +51,33 @@ public class ListLinked<E> {
         }
 
         return temp.data;
+    }
+
+    // ELIMINAR
+    public void remove(int index) {
+
+        if (index < 0 || index >= size) {
+
+            return;
+        }
+
+        if (index == 0) {
+
+            head = head.next;
+
+        } else {
+
+            Node<E> temp = head;
+
+            for (int i = 0; i < index - 1; i++) {
+
+                temp = temp.next;
+            }
+
+            temp.next = temp.next.next;
+        }
+
+        size--;
     }
 
     // TAMAÑO
