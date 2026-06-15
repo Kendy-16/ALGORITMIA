@@ -1,5 +1,4 @@
 package graph;
-
 import listlinked.ListLinked;
 
 public class GraphLink<E> {
@@ -7,15 +6,12 @@ public class GraphLink<E> {
     private ListLinked<AdjList<E>> graph;
 
     public GraphLink() {
-
         graph = new ListLinked<>();
     }
 
     // INSERTAR VERTICE
     public void insertVertex(E data) {
-
         Vertex<E> vertex = new Vertex<>(data);
-
         graph.addLast(new AdjList<>(vertex));
     }
 
@@ -25,13 +21,10 @@ public class GraphLink<E> {
         for (int i = 0; i < graph.size(); i++) {
 
             AdjList<E> adj = graph.get(i);
-
             if (adj.getVertex().getData().equals(data)) {
-
                 return adj;
             }
         }
-
         return null;
     }
 
@@ -40,21 +33,15 @@ public class GraphLink<E> {
 
         AdjList<E> v1 = findVertex(origin);
         AdjList<E> v2 = findVertex(destination);
-
         if (v1 == null || v2 == null) {
-
             return;
         }
 
         // ORIGEN -> DESTINO
-        v1.getEdges().addLast(
-                new Edge<>(v2.getVertex())
-        );
+        v1.getEdges().addLast(new Edge<>(v2.getVertex()));
 
         // DESTINO -> ORIGEN
-        v2.getEdges().addLast(
-                new Edge<>(v1.getVertex())
-        );
+        v2.getEdges().addLast(new Edge<>(v1.getVertex()));
     }
 
     // ELIMINAR ARISTA
@@ -62,9 +49,7 @@ public class GraphLink<E> {
 
         AdjList<E> v1 = findVertex(origin);
         AdjList<E> v2 = findVertex(destination);
-
         if (v1 == null || v2 == null) {
-
             return;
         }
 
@@ -72,9 +57,7 @@ public class GraphLink<E> {
         for (int i = 0; i < v1.getEdges().size(); i++) {
 
             Edge<E> edge = v1.getEdges().get(i);
-
             if (edge.getDestination().getData().equals(destination)) {
-
                 v1.getEdges().remove(i);
                 break;
             }
@@ -84,9 +67,7 @@ public class GraphLink<E> {
         for (int i = 0; i < v2.getEdges().size(); i++) {
 
             Edge<E> edge = v2.getEdges().get(i);
-
             if (edge.getDestination().getData().equals(origin)) {
-
                 v2.getEdges().remove(i);
                 break;
             }
@@ -97,9 +78,7 @@ public class GraphLink<E> {
     public void removeVertex(E data) {
 
         AdjList<E> vertex = findVertex(data);
-
         if (vertex == null) {
-
             return;
         }
 
@@ -107,13 +86,10 @@ public class GraphLink<E> {
         for (int i = 0; i < graph.size(); i++) {
 
             AdjList<E> adj = graph.get(i);
-
             for (int j = 0; j < adj.getEdges().size(); j++) {
 
                 Edge<E> edge = adj.getEdges().get(j);
-
                 if (edge.getDestination().getData().equals(data)) {
-
                     adj.getEdges().remove(j);
                     j--;
                 }
@@ -122,9 +98,7 @@ public class GraphLink<E> {
 
         // eliminar vertice
         for (int i = 0; i < graph.size(); i++) {
-
             if (graph.get(i).getVertex().getData().equals(data)) {
-
                 graph.remove(i);
                 break;
             }
@@ -133,7 +107,6 @@ public class GraphLink<E> {
 
     // BUSCAR VERTICE
     public boolean searchVertex(E data) {
-
         return findVertex(data) != null;
     }
 
@@ -141,22 +114,17 @@ public class GraphLink<E> {
     public boolean searchEdge(E origin, E destination) {
 
         AdjList<E> v = findVertex(origin);
-
         if (v == null) {
-
             return false;
         }
 
         for (int i = 0; i < v.getEdges().size(); i++) {
 
             Edge<E> edge = v.getEdges().get(i);
-
             if (edge.getDestination().getData().equals(destination)) {
-
                 return true;
             }
         }
-
         return false;
     }
 
@@ -164,22 +132,105 @@ public class GraphLink<E> {
     public void adjacentVertices(E data) {
 
         AdjList<E> v = findVertex(data);
-
         if (v == null) {
-
             return;
         }
 
         System.out.print(data + " -> ");
-
         for (int i = 0; i < v.getEdges().size(); i++) {
-
-            System.out.print(
-                    v.getEdges().get(i) + " "
+            System.out.print(v.getEdges().get(i) + " "
             );
         }
-
         System.out.println();
+    }
+
+    // BFS
+    public void BFS(E start) {
+
+        AdjList<E> startVertex = findVertex(start);
+        if (startVertex == null) {
+            return;
+        }
+
+        ListLinked<E> visited = new ListLinked<>();
+        ListLinked<AdjList<E>> queue = new ListLinked<>();
+
+        visited.addLast(start);
+        queue.addLast(startVertex);
+
+        System.out.print("BFS: ");
+
+        while (queue.size() > 0) {
+            AdjList<E> current = queue.get(0);
+            queue.remove(0);
+            System.out.print(current.getVertex() + " ");
+
+            for (int i = 0; i < current.getEdges().size(); i++) {
+
+                Edge<E> edge = current.getEdges().get(i);
+                E neighbor = edge.getDestination().getData();
+                if (!contains(visited, neighbor)) {
+                    visited.addLast(neighbor);
+                    queue.addLast(findVertex(neighbor)
+                    );
+                }
+            }
+        }
+        System.out.println();
+    }
+
+    // DFS
+    public void DFS(E start) {
+
+        AdjList<E> startVertex = findVertex(start);
+        if (startVertex == null) {
+            return;
+        }
+
+        ListLinked<E> visited = new ListLinked<>();
+        System.out.print("DFS: ");
+        DFSRecursive(startVertex, visited);
+        System.out.println();
+    }
+
+    // DFS RECURSIVO
+    private void DFSRecursive(AdjList<E> current, ListLinked<E> visited) {
+
+        E data = current.getVertex().getData();
+        visited.addLast(data);
+        System.out.print(data + " ");
+
+        for (int i = 0; i < current.getEdges().size(); i++) {
+            Edge<E> edge = current.getEdges().get(i);
+            E neighbor = edge.getDestination().getData();
+
+            if (!contains(visited, neighbor)) {
+                DFSRecursive(findVertex(neighbor), visited);
+            }
+        }
+    }
+
+    // GRAFO CONEXO
+    public boolean isConnected() {
+
+        if (graph.size() == 0) {
+            return true;
+        }
+
+        ListLinked<E> visited = new ListLinked<>();
+        DFSRecursive(graph.get(0),visited);
+        return visited.size() == graph.size();
+    }
+
+    // AUXILIAR
+    private boolean contains(ListLinked<E> list, E data) {
+
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(data)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // MOSTRAR GRAFO
@@ -187,24 +238,15 @@ public class GraphLink<E> {
     public String toString() {
 
         StringBuilder sb = new StringBuilder();
-
         for (int i = 0; i < graph.size(); i++) {
-
             AdjList<E> adj = graph.get(i);
-
-            sb.append(adj.getVertex())
-              .append(" -> ");
+            sb.append(adj.getVertex()).append(" -> ");
 
             for (int j = 0; j < adj.getEdges().size(); j++) {
-
-                sb.append(
-                        adj.getEdges().get(j)
-                ).append(" ");
+                sb.append(adj.getEdges().get(j)).append(" ");
             }
-
             sb.append("\n");
         }
-
         return sb.toString();
     }
 }
