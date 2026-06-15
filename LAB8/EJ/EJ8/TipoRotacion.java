@@ -2,10 +2,6 @@
  * Enumeración que identifica el tipo de rotación AVL aplicada
  * durante la inserción de un código de producto.
  *
- * Permite responder la Pregunta adicional 1:
- *   "¿Qué rotación se aplicó al insertar un código?"
- *
-
  */
 public enum TipoRotacion {
     NINGUNA   ("Sin rotación       - el árbol ya estaba balanceado."),
