@@ -300,7 +300,7 @@ public class EJ4 {
                 // Vecinos directos (aristas de salida)
                 Nodo cur = adj[u];
                 while (cur != null) {
-                    if (!visitado[cur.destino]) {
+                if (!visitado[cur.destino]) {
                         visitado[cur.destino] = true;
                         cola[fin++] = cur.destino;
                         conteo++;
